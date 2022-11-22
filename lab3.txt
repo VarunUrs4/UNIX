@@ -1,0 +1,337 @@
+bmsce@bmsce-Precision-T1700:~$ script UnixLabVarunurs182
+Script started, file is UnixLabVarunurs182
+bmsce@bmsce-Precision-T1700:~$ cd varunurs
+bmsce@bmsce-Precision-T1700:~/varunurs$ ls
+hello.save
+bmsce@bmsce-Precision-T1700:~/varunurs$ cat hello.save
+#! /bin/sh
+#Hello.sh : hello world Program
+#
+echo Hello World
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano hello.save
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano hello.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ Hello.sh
+Hello.sh: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ ./Hello.sh
+bash: ./Hello.sh: No such file or directory
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh Hello.sh
+sh: 0: Can't open Hello.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh hello.sh
+Hello World by
+bmsce@bmsce-Precision-T1700:~/varunurs$ hello.sh "Varun Urs"
+hello.sh: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ ./hello.sh "Varun Urs"
+bash: ./hello.sh: Permission denied
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh hello.sh "Varun Urs"
+Hello World by Varun Urs
+bmsce@bmsce-Precision-T1700:~/varunurs$ chmod a+x hello.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ hello.sh
+hello.sh: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ ./hello.sh
+Hello World by
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano hello.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ hello.sh
+hello.sh: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ ./hello.sh varun
+Hello World by varun
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano dateScript.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ ./dateScript.sh
+bash: ./dateScript.sh: Permission denied
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh dateScript.sh
+ Today's date : 
+Tue Nov 22 11:34:31 IST 2022
+bmsce@bmsce-Precision-T1700:~/varunurs$ fg
+bash: fg: current: no such job
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano dateScript
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano dateScript.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano file1.txt
+bmsce@bmsce-Precision-T1700:~/varunurs$ gedit emp.lst
+bmsce@bmsce-Precision-T1700:~/varunurs$ cat emp.lst
+2233|a.k. shukla|g.m.|sales|12/12/52|6000
+9876|jai sharma|director|production|03/12/50|7000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43|6000
+2365|barun sengupta|director|personnel|05/11/47|7800
+5423|n.k. gupta|chairman|admin|08/30/56|5400
+1006|chanchal sanghvi|director|sales|09/03/38|6700
+6213|karuna ganguly|g.m.|accounts|06/05/62|6300
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+4290|jayant Chodhury|executive|production|09/07/50|6000
+2476|anil aggarwal|manager|sales|05/01/59|5000
+6521|lalit chowdury|director|marketing|09/26/45|8200
+3212|shyam saksena|d.g.m|accounts|12/12/55|6000
+3564|sudhir Agarwal|executive|personnel|07/06/47|8000
+2345|j.b. saxena|g.m.|marketing|03/12/45|8000
+0110|v.k. agrawal |g.m.|marketing|12/31/40|9000
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh findPattern.sh
+Enter the pattern to be found : manager
+Enter the filename : emp.lst
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern_command.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh findPattern_command.sh "production" emp.lst
+findPattern_command.sh : Searching production in emp.lst file........
+9876|jai sharma|director|production|03/12/50|7000
+4290|jayant Chodhury|executive|production|09/07/50|6000
+Pattern found successfully
+
+
+Parameters passed were production emp.lst
+Number of parameters found : 2
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern_command.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh findPattern_command.sh "production" emp.lst
+findPattern_command.sh : Searching production in emp.lst file........
+9876|jai sharma|director|production|03/12/50|7000
+4290|jayant Chodhury|executive|production|09/07/50|6000
+Pattern found successfully
+
+
+Parameters passed were : production emp.lst
+Number of parameters found : 2
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern_command.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano findPattern_command.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano exitStatus.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh exitStatus.sh "manager" emp.lst
+exitStatus.sh : Searching manager pattern from emp.lst file.......
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern search successful ?    exit_status : 0
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh exitStatus.sh "president" emp.lst
+exitStatus.sh : Searching president pattern from emp.lst file.......
+Pattern search successful ?    exit_status : 1
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano exitStatus.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh exitStatus.sh "manager" emp.lst
+
+exitStatus.sh : Searching manager pattern from emp.lst file.......
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+
+Pattern search successful ?    exit_status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh exitStatus.sh "president" emp.lst
+
+exitStatus.sh : Searching president pattern from emp.lst file.......
+
+
+Pattern search successful ?    exit_status : 1
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo andOr.sh
+andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "manager" emp.lst
+
+andOr.sh : Searching..........
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found! exit status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "president"" emp.lst
+> bash: unexpected EOF while looking for matching `"'
+bash: syntax error: unexpected end of file
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "president" emp.lst
+
+andOr.sh : Searching..........
+
+Pattern not found! exit status : 1
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "manager" emp.lst
+
+andOr.sh : Searching..........
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found! exit status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh findPattern_command.sh "production" emp.lst
+findPattern_command.sh : Searching production in emp.lst file........
+9876|jai sharma|director|production|03/12/50|7000
+4290|jayant Chodhury|executive|production|09/07/50|6000
+Pattern found successfully
+
+
+Parameters passed were : production emp.lst
+Number of parameters found : 2
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "manager" emp.lst
+
+andOr.sh : Searching..........
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found! exit status : 0
+
+Pattern not found! exit status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "manager" emp.lst
+
+andOr.sh : Searching..........
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found! exit status : 0
+
+Pattern not found! exit status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "manager" emp.lst
+
+andOr.sh : Searching..........
+
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found! exit status : 0
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh andOr.sh "president" emp.lst
+
+andOr.sh : Searching..........
+
+Pattern not found! exit status : 1
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano andOr.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano if-else.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh if-else.sh "manager" emp.lst
+1265|s.n. dasgupta|manager|sales|09/12/63|5600
+2476|anil aggarwal|manager|sales|05/01/59|5000
+Pattern found
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh if-else.sh "managerrr" emp.lst
+Pattern not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano if-else.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ $x=10; $y=2
+=10: command not found
+=2: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ x=10; y=2
+bmsce@bmsce-Precision-T1700:~/varunurs$ $x+$y
+10+2: command not found
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr $x + $y`
+12
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr $x \* $y`
+20
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr $x / $y`
+5
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2020
+leapYear.sh: 7: leapYear.sh: Syntax error: end of file unexpected (expecting "fi")
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2020
+expr: syntax error: unexpected argument ‘-eq’
+Year 2020 is not a leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2020
+leapYear.sh: 4: leapYear.sh: 0: not found
+Year 2020 is not a leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2021
+leapYear.sh: 4: leapYear.sh: 1: not found
+Year 2021 is not a leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2020
+leapYear.sh: 4: leapYear.sh: [0: not found
+Year 2020 is not a leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2020
+Year 2020 is leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh leapYear.sh 2021
+Year 2021 is not a leap year
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano leapYear.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: PI: not found
+area.sh: 4: area.sh: r: not found
+area.sh: 5: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: PI: not found
+area.sh: 4: area.sh: r: not found
+area.sh: 5: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+expr: syntax error: unexpected argument ‘/app’
+area.sh: 4: area.sh: area: not found
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr 3.14 \* 4 \* 4`
+expr: non-integer argument
+
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr 3 \* 4 \* 4`
+48
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo `expr 3.14 \* 4 \* 4` | bc
+expr: non-integer argument
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo "scale = $3; 4 * 100" | bc
+(standard_in) 1: syntax error
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo "scale = 2; 4 * 100" | bc
+400
+bmsce@bmsce-Precision-T1700:~/varunurs$ echo "scale = 2; 4 * 100 / 3" | bc
+133.33
+bmsce@bmsce-Precision-T1700:~/varunurs$ ^C
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+133.33
+area.sh: 5: area.sh: area: not found
+area.sh: 5: area.sh: 2: not found
+expr: syntax error: unexpected argument ‘/app’
+Area of the circle : 
+133.33
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: area: not found
+area.sh: 4: area.sh: 2: not found
+expr: syntax error: unexpected argument ‘/app’
+Area of the circle : 
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+expr: syntax error: unexpected argument ‘/app’
+Area of the circle :  | 2
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: scale: not found
+expr: syntax error: unexpected argument ‘/app’
+Area of the circle :  | 2
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: scale: not found
+area.sh: 1: area.sh: 3.14: not found
+Area of the circle :  | 2
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ sh area.sh 4
+area.sh: 4: area.sh: scale: not found
+area.sh: 5: area.sh: PI: not found
+area.sh: 1: area.sh: /app: Permission denied
+Area of the circle :  | 2
+bmsce@bmsce-Precision-T1700:~/varunurs$ nano area.sh
+bmsce@bmsce-Precision-T1700:~/varunurs$ exit script 
+exit
+bash: exit: script: numeric argument required
+Script done, file is UnixLabVarunurs182
+bmsce@bmsce-Precision-T1700:~$ e
+
+
